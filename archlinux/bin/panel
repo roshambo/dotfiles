@@ -1,0 +1,39 @@
+#!/bin/bash
+
+PANEL_PADDING=12
+PANEL_HEIGHT=30
+PANEL_FIFO=/tmp/panel-fifo
+
+if [ $(pgrep -cx panel) -gt 1 ]; then
+    printf "%s\n" "The panel is already running" >&2
+    exit 1
+fi
+
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+
+# Cleanup old fifo and make a new one
+if [ -e $PANEL_FIFO ]; then
+    rm $PANEL_FIFO
+fi
+mkfifo $PANEL_FIFO
+
+bspc control --subscribe > $PANEL_FIFO &
+
+# Hmm find out how to make this scroll
+xtitle -sf'T[%s]' -t 20 > $PANEL_FIFO &
+
+# Time
+while true; do
+echo 'C\uf017' $(date +'%l:%M %p')
+    sleep 5
+done > $PANEL_FIFO &
+
+# Date
+while true; do
+echo 'D\uf073' $(date +'%b %d')
+    sleep 5
+done > $PANEL_FIFO &
+
+cat $PANEL_FIFO | lemonbar -g $PANEL_HEIGHT | bash &
+
+wait

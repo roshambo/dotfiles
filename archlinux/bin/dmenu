@@ -1,0 +1,6 @@
+#!/bin/sh
+
+#MAX_WIDTH=400
+#/usr/bin/dmenu -i -ia top-gapless -is $MAX_WIDTH -sf '#222222' -sb '#eaeaea' -nf '#bcbcbc' -nb '#262626' -fn "ttyp0 14" "$@"
+
+/usr/bin/dmenu -i -sf '#222222' -sb '#eaeaea' -nf '#bcbcbc' -nb '#262626' "$@"

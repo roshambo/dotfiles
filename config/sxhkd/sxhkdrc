@@ -126,4 +126,4 @@ super + {Left,Down,Up,Right}
 #
 
 alt + space
-    dmenu -l 10
+    dmenu_run -l 10

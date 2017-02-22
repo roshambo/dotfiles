@@ -16,3 +16,5 @@ alias disable='sudo systemctl disable'
 alias status='sudo systemctl status'
 alias pacman='sudo pacman'
 alias restart_network='sudo systemctl restart dhcpcd'
+
+PATH=~/.dotfiles/archlinux/bin:$PATH
