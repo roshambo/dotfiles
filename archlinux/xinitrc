@@ -1,0 +1,6 @@
+sxhkd &
+urxvt &
+compton -cb -o 0.4 -r 8 -l -8 -t -8 &
+panel &
+bspwm &
+exec startxfce4

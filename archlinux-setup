@@ -17,6 +17,7 @@ link config/bspwm config/bspwm
 link config/sxhkd config/sxhkd
 link gitconfig archlinux/gitconfig
 link bashrc archlinux/bashrc
+link xinitrc archlinux/xinitrc
 
 unset THISDIR
 
