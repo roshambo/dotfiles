@@ -18,6 +18,7 @@ link config/sxhkd config/sxhkd
 link gitconfig archlinux/gitconfig
 link bashrc archlinux/bashrc
 link xinitrc archlinux/xinitrc
+link Xresources archlinux/Xresources
 
 unset THISDIR
 
