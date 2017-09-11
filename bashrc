@@ -1,1 +1,0 @@
-/home/christian/.dotfiles/archlinux/bashrc

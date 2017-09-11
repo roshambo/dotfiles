@@ -16,6 +16,12 @@ link gitconfig macos/gitconfig
 link bash_profile macos/bash_profile
 link bashrc macos/bashrc
 
+# XCode Themes
+XCODE_THEMES=~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+mkdir -p $XCODE_THEMES
+ln -s $THISDIR/xcode/Meowgorithm.dvtcolortheme $XCODE_THEMES/Meowgorithm.dvtcolortheme
+ln -s $THISDIR/xcode/MeowgorithmMorning.dvtcolortheme $XCODE_THEMES/MeowgorithmMorning.dvtcolortheme
+
 echo
 echo Done.
 echo

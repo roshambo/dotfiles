@@ -75,9 +75,9 @@ if [ -f $GIT_BASH_COMPLETION_SCRIPT ]; then
 fi
 
 # Go Stuff
-export GOPATH=~/.go
+export GOPATH=$HOME/.go
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOBIN
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOBIN:$(go env GOPATH)
 
 # Editors
 export EDITOR=vim
